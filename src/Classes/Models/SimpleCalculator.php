@@ -76,6 +76,4 @@ class SimpleCalculator
     {
         $this->command_read_line = $command_read_line;
     }
-
-
 }

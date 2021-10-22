@@ -1,8 +1,6 @@
 <?php
 
-
 namespace App\Modules\SimpleCalculator;
-
 
 use App\Models\SimpleCalculator;
 

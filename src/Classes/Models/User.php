@@ -1,8 +1,6 @@
 <?php
 
-
 namespace App\Models;
-
 
 class User
 {
@@ -25,7 +23,6 @@ class User
         $this->password = $password;
         $this->age = $age;
     }
-
 
     /**
      * @return mixed
@@ -90,6 +87,4 @@ class User
     {
         $this->age = $age;
     }
-
-
 }

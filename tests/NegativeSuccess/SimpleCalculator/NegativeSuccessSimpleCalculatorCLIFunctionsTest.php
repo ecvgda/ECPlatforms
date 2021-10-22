@@ -1,11 +1,7 @@
 <?php
 
-
 namespace PositiveSuccess\SimpleCalculator;
 
-
-use App\Models\User;
-use App\Modules\SimpleCalculator\SimpleCalculatorCLI;
 use App\Modules\SimpleCalculator\SimpleCalculatorCLIFuntions;
 use PHPUnit\Framework\TestCase;
 
@@ -20,17 +16,19 @@ class PositiveSuccessSimpleCalculatorCLIFunctionsTest extends TestCase
         $this->SimpleCalculatorCLIFuntions->setSignForCalculateValues("+");
         $this->SimpleCalculatorCLIFuntions->setIntSecondValue(23);
     }
+
     protected function tearDown(): void
     {
 
     }
 
-    public function testFunctionCheckValuesWithSameAssert() {
+    public function testFunctionCheckValuesWithSameAssert()
+    {
         $this->assertNotSame(36, $this->SimpleCalculatorCLIFuntions->checkValues());
     }
 
-
-    public function simpleCalculatorProvider(){
+    public function simpleCalculatorProvider()
+    {
         return [
             'one' => [15, "-", 12, 23],
             'two' => [13, "+", 12, 235],
@@ -45,16 +43,15 @@ class PositiveSuccessSimpleCalculatorCLIFunctionsTest extends TestCase
      * @param $ProvidersSecondValue
      * @param $ProvidersResultValue
      */
+
     public function testFunctionCheckValuesWithDataProviderSameAssert($providersFirstValue,
                                                                       $ProvidersSign,
                                                                       $ProvidersSecondValue,
-                                                                      $ProvidersResultValue) {
-
+                                                                      $ProvidersResultValue)
+    {
         $this->SimpleCalculatorCLIFuntions->setIntFirstValue($providersFirstValue);
         $this->SimpleCalculatorCLIFuntions->setSignForCalculateValues($ProvidersSign);
         $this->SimpleCalculatorCLIFuntions->setIntSecondValue($ProvidersSecondValue);
         $this->assertNotSame("$ProvidersResultValue", $this->SimpleCalculatorCLIFuntions->checkValues());
     }
-
-
 }

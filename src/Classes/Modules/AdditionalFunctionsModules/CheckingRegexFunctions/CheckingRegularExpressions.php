@@ -1,8 +1,6 @@
 <?php
 
-
 namespace App\Modules\CheckingRegexFunctions;
-
 
 class CheckingRegularExpressions
 {

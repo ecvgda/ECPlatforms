@@ -1,8 +1,6 @@
 <?php
 
-
 namespace App\Modules\UserCharacter;
-
 
 class UserCharacter extends UserCharacterFunctions
 {

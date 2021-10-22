@@ -3,8 +3,6 @@
 use App\Models\User;
 use PHPUnit\Framework\TestCase;
 
-
-
 class NegativeSuccessUserTest extends TestCase
 {
     private $user;
@@ -14,12 +12,14 @@ class NegativeSuccessUserTest extends TestCase
         $this->user = new User();
         $this->user->setUserName("Richard");
     }
+
     protected function tearDown(): void
     {
 
     }
 
-    public function userProvider(){
+    public function userProvider()
+    {
         return [
             'one' => ["Ivan"],
             'two' => ["Lory"],
@@ -30,16 +30,13 @@ class NegativeSuccessUserTest extends TestCase
     /**
     * @dataProvider userProvider
     */
-    public function testNameWithDataProviderEqualsAssert($providersName) {
+    public function testNameWithDataProviderEqualsAssert($providersName)
+    {
         $this->assertNotSame($providersName, $this->user->getUserName());
     }
 
-
-    public function testNameWithEqualsAssert() {
-
+    public function testNameWithEqualsAssert()
+    {
         $this->assertNotEquals("Richars", $this->user->getUserName());
-
     }
-
-
 }

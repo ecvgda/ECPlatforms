@@ -1,14 +1,11 @@
 <?php
 
-
 namespace App\Modules\CustomCalculator;
-
 
 class CustomCalculatorCLI
 {
     private $main_menu_information;
     private $user_information;
-
 
     function CustomCalculatorCLIRun(): void
     {
